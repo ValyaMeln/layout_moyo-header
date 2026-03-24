@@ -42,6 +42,7 @@ html {
 .nav-link {
   display: flex; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
   align-items: center; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
+  justify-content: center;
   height: var(
     --header-height
   ); /* the height should be set for nav links (not the header), take it from the design */
