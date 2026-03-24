@@ -6,20 +6,10 @@ body {
   font-size: 12px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0; /* Reset browser default margins/ Скинути поля браузера за замовчуванням */
-  padding: 0; /* Reset browser default margins/ Скинути поля браузера за замовчуванням */
-}
-
 html {
   --header-height: 60px;
   --text-blue: #00acdc;
   --text-black: #000;
-}
-
-ul {
-  list-style: none;
 }
 
 .header {
@@ -27,14 +17,18 @@ ul {
   display: flex; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
   align-items: center; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
   justify-content: space-between;
+  height: var(--header-height);
 }
 
-.logo img {
+.logo .logo-image {
   display: block;
 }
 
 .nav-list {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item:not(:first-child) {
@@ -80,7 +74,7 @@ ul {
 }
 
 @media (max-width: 1200px) {
-  [data-qa='hover'] {
+  [data-qa='hover']:hover {
     color: var(
       --text-blue
     ); /* add data-qa="hover" attribute to the 4th link for testing (Laptops & computers) */
@@ -88,7 +82,7 @@ ul {
 }
 
 @media (max-width: 1024px) {
-  [data-qa='hover'] {
+  [data-qa='hover']:hover {
     color: var(
       --text-blue
     ); /* add data-qa="hover" attribute to the 4th link for testing (Laptops & computers) */
